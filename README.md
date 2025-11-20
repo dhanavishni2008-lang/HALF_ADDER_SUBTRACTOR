@@ -50,6 +50,8 @@ Figure -02 HALF Subtractor
 
 **Program:**
 
+HALF ADDER
+
 module half_adder (
     input  wire a, b,     // Inputs
     output wire sum,      // Sum output
@@ -62,17 +64,39 @@ module half_adder (
 
 endmodule
 
+HALF SUBTRACTOR
+
+module half_subtractor (
+    input  wire a, b,         // Inputs
+    output wire diff, borrow  // Outputs
+);
+
+    // Logic equations
+    assign diff   = a ^ b;     // XOR for difference
+    assign borrow = ~a & b;    // Borrow when a < b
+
+endmodule
+
+
 Developed by:DHANAVISHNI M 
 RegisterNumber:25016333
 
 **RTL Schematic**
 
+HALF ADDER
 <img width="1920" height="1080" alt="Screenshot (80)" src="https://github.com/user-attachments/assets/33ad203c-7470-4fa4-8f3e-cce439a7389b" />
+
+HALF SUBTRACTOR
+<img width="1920" height="1080" alt="Screenshot (90)" src="https://github.com/user-attachments/assets/7ecec2fd-5edc-445d-8e4b-1d3f5f6509a8" />
 
 
 **Output/TIMING Waveform**
-
+HALF ADDER
 <img width="1920" height="1080" alt="Screenshot (81)" src="https://github.com/user-attachments/assets/120517b9-f2bb-43f0-9ba9-3239355cf201" />
+
+HALF SUBTRACTOR
+<img width="1920" height="1080" alt="Screenshot (91)" src="https://github.com/user-attachments/assets/8f7e3639-2d35-4514-b13a-25f7c9c12982" />
+
 
 
 **Result:**
